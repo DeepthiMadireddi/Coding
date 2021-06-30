@@ -1,0 +1,33 @@
+class change
+{
+public static void main(String args[])
+{
+int n,x,y;
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();	
+x=sc.nextInt();	
+y=sc.nextInt();
+int r;
+int sum=0;
+
+while(n!=0)
+{
+r = n%10;
+sum=(sum*10)+r;
+n=n/10;
+}
+while(sum>0)
+{
+r=sum%10;
+if(r==x)
+{
+System.out.print(y);
+}
+else
+{
+System.out.print(r);
+}
+sum=sum/10;
+}
+}
+}
