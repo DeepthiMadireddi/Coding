@@ -1,0 +1,33 @@
+class Big
+{
+public static void main(String args[])
+{
+	int b1,b2,b3,b4,M;
+	Scanner bi=new Scanner(System.in);
+	int a=bi.nextInt();
+	int b=bi.nextInt();
+	int c=bi.nextInt();
+	int d=bi.nextInt();
+	int e=bi.nextInt();
+	int f=bi.nextInt();    			
+	int g=bi.nextInt();
+	int h=bi.nextInt();
+	int i=bi.nextInt();
+	int j=bi.nextInt();
+	int k=bi.nextInt();			
+	 int l=bi.nextInt();    		
+	int m=bi.nextInt();	
+	int n=bi.nextInt();
+	int o=bi.nextInt();
+	int p=bi.nextInt();	 b1=(int)Math.max(Math.max(a,b),Math.max(c,d));
+b2=(int)Math.max(Math.max(e,f),Math.max(g,h));
+b3=(int)Math.max(Math.max(i,j),Math.max(
+	k,l));
+b4=(int)Math.max(Math.max(m,n),Math.max(o,p));	 
+	M=(int)Math.max(Math.max(b1,b2),Math.max(b2,b3));
+		System.out.print(M);
+		}
+		}
+	
+				
+    
