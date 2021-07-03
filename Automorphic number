@@ -1,0 +1,26 @@
+import java.util.*;
+class Automorphic
+{
+	public static void main(String args[])
+{
+	int n,r;
+	int p;
+	Scanner sc=new Scanner(System.in);
+	n=sc.nextInt();
+	while (n>0)//76
+	{
+		p=(int)Math.pow(n,2);//5776
+		r=(p%100);//76
+	if(r==n)//76=76?
+	{
+		System.out.println(n+ " Is a Automorphic number");
+		break;
+		}
+		else
+		{
+		System.out.println(n+"Is not a automorphic number");
+		break;
+		}
+		}
+		}
+		}
