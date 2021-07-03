@@ -1,0 +1,38 @@
+import java.util.*;
+class Matrix
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n;
+n=sc.nextInt(); //4
+int size=n*2-1; //7
+char ch='A';
+char[][] m=new char[size][size]; //7x7
+int start,end,i,j;
+start=0;
+end=size-1; //6
+while(n!=0)
+{
+for(i=start;i<=end;i++) 
+{
+for(j=start;j<=end;j++) 
+{
+if(i==start || i==end || j==start||j==end) 
+m[i][j] =ch; // m[][]--> 4 --> 3 ---> 2 --> 1
+}}
+n--;
+ch++; //A,B,C,D
+start++; // 1,2,3
+end--; // 5,4,3
+}
+for(i=0;i<size;i++)
+{
+for(j=0;j<size;j++)
+{
+System.out.print(m[i][j]+" ");
+}
+System.out.println();
+}
+}
+}
