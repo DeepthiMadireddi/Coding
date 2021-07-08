@@ -1,0 +1,26 @@
+class Assign3
+{
+public static void main(String[] args)
+{ 
+Scanner sc=new Scanner(System.in);
+int i; int n=sc.nextInt(); 
+int r=sc.nextInt(); 
+int ar[]=new int[n]; 
+int br[]=new int[n]; 
+for(i=0;i<n;i++) 
+{
+ar[i]=sc.nextInt(); 
+}
+for(i=0;i<n;i++)
+{
+ if((i-r)<=0)
+ {
+  br[n+i-1-r]=ar[i]; 
+}
+ else 
+{
+br[i-1-r]=ar[i];
+}}
+ for(i=0;i<n;i++)
+ System.out.print(br[i]);
+ } }
