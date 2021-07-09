@@ -1,0 +1,21 @@
+class Stringsplit 
+{
+public static void main(String args[])
+{
+String str;int m=0;int count=0;
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter string data:");
+str=sc.nextLine();
+String ch[]=str.split(" ");
+int n=ch.length;
+if(n==0)
+System.out.print(n);
+else
+{
+for (int i=0;i<n;i++)
+{
+m=ch[i].length();
+count+=m;
+}
+System.out.print(count);
+}}}
