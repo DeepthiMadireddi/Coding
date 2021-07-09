@@ -1,0 +1,30 @@
+import java.util.*;
+class Stringpalindrome {
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter string data:");
+String str;int flag=0;
+str=sc.nextLine();
+char ch[]=str.toCharArray();
+int n=ch.length;
+for(int i=0;i<n;i++)
+{
+if(ch[i]==ch[n-i-1])
+{
+flag=0;
+}
+else
+{
+flag=1;
+}
+}
+if(flag==0)
+{
+System.out.print(" palindrome");
+}
+else
+{
+System.out.print("not a palindrome");
+}}
+}
