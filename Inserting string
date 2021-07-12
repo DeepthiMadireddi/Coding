@@ -1,0 +1,22 @@
+import java .util.*;
+class Inserting
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter string");
+String str=sc.nextLine();
+System.out.println("Enter inserting string");
+String ins=sc.nextLine();
+System.out.println("Enter position");
+int p=sc.nextInt();
+int k=p-1 ;
+String ch[]=str.split(" ");
+for(int j=0;j<ch.length;j++)
+{
+StringBuilder b=new StringBuilder(ch[j]);
+b.insert(k,ins);
+System.out.print(b.toString()+" ");
+}
+}
+}
