@@ -1,0 +1,27 @@
+import java.util.*;
+class Factorial
+{
+int n;
+int  fact(int n)
+{
+if(n==1)
+{
+return 1;
+}
+else
+{
+return (n*fact(n-1));
+}
+}
+}
+class main
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner (System.in);
+System.out.print("enter number");
+int n=sc.nextInt();
+Factorial f=new Factorial();
+System.out.print(f.fact(n));
+}
+}
