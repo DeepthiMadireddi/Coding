@@ -1,0 +1,43 @@
+import java.util.*;
+class methods
+{
+public static void main(String args[])
+{
+ Scanner sc=new Scanner(System.in);
+System.out.println("Enter string");
+String s=sc.nextLine();
+int count=0;
+System.out.println("no.of operations");
+int q=sc.nextInt();
+for(int i=1;i<=q;i++)
+{
+System.out.println("Enter ind and ch");
+int ind=sc.nextInt();
+char ch=sc.next().charAt(0);
+s=s.replace(s.charAt(ind-1),ch);
+}
+String str=s;
+System.out.println("no.of  another operations");
+int m=sc.nextInt();
+for(int i=1;i<=m;i++)
+{
+System.out.println("Enter  indexes");
+int ind1=sc.nextInt();
+int ind2=sc.nextInt();
+String st=s.substring(ind1-1,ind2);
+StringBuffer sb=new StringBuffer(st);
+sb.reverse();
+sb.toString();
+s=s.replace(st,sb);
+}
+System.out.println(str);
+System.out.println(s);
+char ch[]=str.toCharArray();
+char ch1[]=s.toCharArray();
+for(int i=0;i<ch1.length;i++)
+{
+if(ch[i]==ch1[i])
+count++;
+}
+System.out.println(count);
+}}
