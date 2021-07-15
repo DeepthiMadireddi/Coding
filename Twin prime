@@ -1,0 +1,35 @@
+import java.util.*; 
+class primeone
+ {
+public static void main(String[] args) 
+{ 
+Scanner sc=new Scanner(System.in); 
+System.out.println("enter fst value"); 
+int n=sc.nextInt(); 
+System.out.println("enter last value"); 
+int n1=sc.nextInt(); 
+System.out.println("twin primes are"); 
+for(int i=n;i<=n1;i++) 
+{ 
+if(primeNos(i)==0 && primeNos(i+2)==0) 
+{ 
+System.out.println(i+ " "+(i+2)); 
+}
+}
+}
+static int primeNos(int n) 
+{
+int count=0; 
+for(int i=2;i<=n/2;i++) 
+{ 
+if(n%i==0) 
+{
+count=1; 
+break; 
+}
+}
+return count; 
+}
+} 
+    
+ 
