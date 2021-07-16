@@ -5,7 +5,7 @@ public static void main(String args[])
 {
 System.out.println("Enter size");
 Scanner sc=new Scanner(System.in);
-int n=sc.nextInt();int count=0;int i;
+int n=sc.nextInt();int i;
 System.out.println("Enter Values");
 ArrayList<Integer> A=new ArrayList<Integer>();
 for( i=0;i<n;i++)
@@ -16,7 +16,7 @@ System.out.println("Enter value which is to be replaced");
 int s=sc.nextInt();
 System.out.println("Enter value to replace ");
 int r=sc.nextInt();
-for( i=0;i<n;i++)
+for(i=0;i<n;i++)
 {
 if(A.get(i)==s)
 { 
