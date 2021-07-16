@@ -28,5 +28,5 @@ break;
 if(i==n)
 {	
 System.out.print("Element not found);
-
+}
 }}
