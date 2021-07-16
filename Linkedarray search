@@ -1,0 +1,32 @@
+import java.util.*;
+ 
+ public class linkedarray
+ {
+     
+   public static void main(String args[]) 
+   {
+   Scanner sc=new Scanner(System.in); 
+ int n,i; 
+LinkedList<Integer> x = new LinkedList<Integer>();
+System.out.println("Enter size"); 
+n=sc.nextInt();
+System.out.println("Enter elements"); 
+for( i=0;i<n;i++)
+ {  
+x.add(sc.nextInt());
+} 
+System.out.println("Enter element to search"); 
+int key=sc.nextInt();
+for( i=0;i<n;i++)
+{
+if(x.get(i)==key)
+{
+    x.remove(x.get(i));
+System.out.print(x);
+break;	
+}}
+if(i==n)
+{	
+System.out.print("Element not found);
+
+}}
