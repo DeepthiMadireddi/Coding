@@ -1,0 +1,38 @@
+import java.util.*;
+ class programme
+  {
+   public static void main(String args[]) { 
+  Vector v=new Vector(); 
+  Scanner sc=new Scanner(System.in);
+  System.out.print("Enter number");
+   int n=sc.nextInt(); int i;
+   for (i=0;i<n;i++) 
+   {
+   v.add(sc.next());
+   }
+   System.out.print(v);
+   System.out.print("\n");
+   System.out.print("Enter delete index");
+   int y=sc.nextInt();
+   v.remove(v.get(y));
+   System.out.print(v);
+   System.out.print("\n");
+  
+   System.out.print("Enter replacing index");
+     int re=sc.nextInt();
+    System.out.print("Enter replacing number");
+     v.set(re,sc.next());
+     System.out.print(v);
+   System.out.print("\n");
+    sc.nextLine();
+    System.out.print("Enter search element");
+   if(v.contains(sc.next()))
+       {
+            System.out.print("found");
+       }
+      
+   else{
+       System.out.print("False");
+     }
+   }
+   }
