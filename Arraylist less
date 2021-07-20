@@ -1,0 +1,23 @@
+import java.util.*;
+class Arraylist
+{
+public static void main(String args[])
+{
+System.out.println("Enter size");
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();int i;
+System.out.println("Enter Values into Array List");
+ArrayList<Integer> A=new ArrayList<Integer>();
+for( i=0;i<n;i++)
+{
+A.add(sc.nextInt());
+}
+System.out.print("Enter k value");
+int k=sc.nextInt();
+for(int j=0;j<n;j++)
+{
+if(A.get(j)>k)
+{ 
+	System.out.print(A.get(j)+" ");
+}
+} }}
