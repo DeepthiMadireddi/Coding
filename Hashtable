@@ -1,0 +1,24 @@
+import java.util.*; 
+  class map1 {
+ public static void main(String args[])
+ { 
+ Hashtable<Integer,Integer> x=new Hashtable<Integer,Integer>(); 
+ Scanner sc=new Scanner(System.in);
+ int n=sc.nextInt();
+ System.out.print("Enter values");
+  for(int i=0;i<n;i++)
+ {
+ int key=sc.nextInt();
+ int Salary=sc.nextInt();
+x.put(key,Salary);
+ }
+ int k=sc.nextInt();
+ if (x.containsKey(k))
+ {
+ System.out.print(x.get(k)+5000);
+ }
+ else
+ {System.out.print("Not found");
+  }
+ }
+  }
