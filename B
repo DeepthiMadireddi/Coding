@@ -1,0 +1,22 @@
+ublic class Solution {
+     Stack<Character>st=new Stack<Character>();
+     Queue<Character>q=new LinkedList<Character>();
+    void pushCharacter(char c)
+    {
+     st.push(c);
+    }
+    void enqueueCharacter(char c)
+    {
+    q.add(c);
+    }
+    int popCharacter( )
+    {
+       int k= st.pop();
+   return k;
+    }
+    int dequeueCharacter()
+    {
+       int l= q.poll();
+        return l;
+        
+    }
