@@ -1,0 +1,30 @@
+class Solution {
+    public int countPrimes(int n)
+{
+
+int a[]=new int[n];int count=0;
+
+for(int i=0;i<n;i++)
+{
+a[i]=i+1;
+}
+for(int i=0;i<n;i++)
+{
+int  flag = 0;
+if((a[i]<=0)||(a[i]!=1))
+{
+for(int j=2;j<a[i];j++)
+{
+if (a[i]% j == 0)
+{
+flag=1;
+break;
+}
+}
+if (flag == 0)
+{
+count++;
+}}}
+return count;
+}
+}
