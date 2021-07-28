@@ -1,0 +1,66 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+    /*
+     * Complete the 'solve' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER m
+     */
+
+    public static int solve(int n, int m) {
+    // Write your code here
+    int count=0;
+    int r=1000000;
+    int prime[]=new int[r+1];
+    for(int i=0;i<r;i++)
+    {
+    prime[i]=1;
+    }
+    prime[1]=0;
+   for(int p=2;p*p<=r;p++)
+   {
+       if(prime[p]==1)
+    for(int i=p*p;i<=r;i=i+p)
+    {
+        if(prime[i]==1)
+        prime[i]=0;
+    }
+   }
+   for(int j=n;j<=m;j++)
+{
+    if(m-n>=2)
+        if((prime[j]==1)&&(prime[j+2]==1))
+        count++;
+    }return ((int)count);
+}}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        int n = Integer.parseInt(firstMultipleInput[0]);
+
+        int m = Integer.parseInt(firstMultipleInput[1]);
+
+        int result = Result.solve(n, m);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
