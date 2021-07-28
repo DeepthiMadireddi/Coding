@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution 
+{
+static int myprime(int start,int end)
+{
+int flag=0,count=0;
+for (int i = start+1; i <end; i = i +1)
+{
+flag = 0;
+for (int j = 2; j <= i/2 ; j++)
+{
+if ((i % j) == 0)
+{
+flag = 1;
+break;
+}
+}
+if (flag == 0)
+{
+count++;
+}}
+return (count);
+}
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int q=sc.nextInt();
+while(q>0)
+{
+int start=sc.nextInt();
+int end=sc.nextInt();
+long primesum=myprime(start,end);
+System.out.println(primesum);
+q--;
+}
+}
+}
