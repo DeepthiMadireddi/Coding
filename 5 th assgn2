@@ -14,8 +14,9 @@ prefix[i]= prefix[i-1]+n[i];
 }
 int left=sc.nextInt();
 int right=sc.nextInt();
+Syste.out.print("sum of values in given range");
 System.out.print(
-((left==0)? prefix[right] :prefix[right]- prefix[left-1]));
+(left==0)? prefix[right] :prefix[right]- prefix[left-1]);
 int a=sc.nextInt();
 int b=sc.nextInt();
 int []pr;
@@ -25,6 +26,7 @@ pr[0]=n[0];
  	{
 pr[i]=pr[i-1]+n[i]+10;
  	}
-System.out.print(
-((a==0)? pr[b]:pr[b]- pr[a-1]));
+System.out.print("update sum of values in given range");
+System.out.print
+((a==0)? pr[b]:pr[b]- pr[a-1]);
 }}
