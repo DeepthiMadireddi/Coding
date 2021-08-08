@@ -1,0 +1,25 @@
+import java.util.*;
+class B
+{
+    // Function to perform bitwise manipulations
+    // a, b and c are input integers
+    public static void main(String args[])
+    {
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    int b=sc.nextInt();
+    int c=sc.nextInt();
+     
+        int d=0,e=0,f=0,g=0;
+        d=a^a;
+        System.out.println(d);
+        e=c^b;
+        System.out.println(e);
+        f=a&b;
+        System.out.println(f);
+        g=c|(a^a);
+        System.out.println(g);
+        e=(~e);
+        System.out.println(e);
+    }
+}
