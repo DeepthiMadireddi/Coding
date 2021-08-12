@@ -1,0 +1,71 @@
+import java.util.*;
+class Mergesort
+{
+static void mergesort(int ar[],int low,int mid ,int high)
+{
+int ls=mid-low+1;
+int rs=high-mid;
+int leftarray[]=new int[ls];
+int rightarray[]=new int[rs];
+for(int i=0;i<ls;i++)
+{
+leftarray[i]=ar[low+i];
+}
+for(int j=0;j<rs;j++)
+{
+rightarray[j]=ar[mid+1+j];
+}
+int i=0,j=0;
+int k=low;
+while(i<ls&&j<rs)
+{
+if(leftarray[i]<rightarray[j])
+{
+ar[k]=leftarray[i];
+i++;
+}
+else
+{
+ar[k]=rightarray[j];
+j++;
+}
+k++;
+}
+while(i<ls)
+{
+ar[k]=leftarray[i];
+i++;
+k++;
+}
+while(j<rs)
+{
+ar[k]=rightarray[j];
+j++;
+k++;
+}
+}
+static void mergediv(int ar[],int low,int high)
+{
+if(low!=high)
+{
+int mid=(low+high)/2;
+mergediv(ar,low,mid);
+mergediv(ar,mid+1,high);
+mergesort(ar,low,mid,high);
+}
+}
+public static void main(String args[])
+{
+int n;
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter no of elements:");
+n=sc.nextInt();
+int ar[]=new int[n];
+for(int i=0;i<n;i++)
+ar[i]=sc.nextInt();
+mergediv(ar,0,n-1);
+System.out.print("After sorting:");
+for(int i=0;i<n;i++)
+System.out.print(ar[i]+" ");
+}
+}
