@@ -1,0 +1,13 @@
+ArrayList<Integer> res = new ArrayList<>();
+preorderTraversal(root,res);
+return res;
+}
+public static void preorderTraversal(Node root,ArrayList<Integer> res)
+{
+if(root==null)
+return;
+else
+{
+res.add(root.data);
+preorderTraversal(root.left,res);
+preorderTraversal(root.right,res);
