@@ -1,0 +1,30 @@
+import java.util.*;
+ class Palindrome
+{
+ static int pallin(int n,int sum)
+{
+if(n==0)
+{
+return sum;
+}
+else
+{
+int res=n%10; 
+sum=sum*10+res;   
+n=n/10;
+return pallin(n,sum);
+}
+}
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println(" Enter number");
+int n=sc.nextInt();
+int temp=n;
+int sum=pallin(n,0);
+if(temp==sum)
+System.out.print("Pallindrome");
+else
+System.out.print("Not a Pallindrome");
+}
+}
