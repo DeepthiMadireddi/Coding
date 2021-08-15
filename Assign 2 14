@@ -1,0 +1,28 @@
+import java.util.*;
+   class indirectrecursive
+        { 
+      static final  int N=50;
+     static   int n=5;
+  public static void ind1() 
+  {   
+  if(n<=N)
+  {
+  	System.out.print(n+" ");
+  	n+=5;
+  	ind2();
+  }
+  }
+  public static void ind2()
+  {
+  	if(n<=N)
+  	{
+  		System.out.print(n+" ");
+  		n+=5;
+  		ind1();
+  	}
+  }
+  public static void main(String args[])
+  {
+  	ind1();
+  }
+        }
