@@ -1,0 +1,23 @@
+import java.util.*;
+class assgn2
+{
+    public static int fib(int n)
+    {
+        if (n <2) 
+        {
+            return n;
+        } 
+        return fib(n - 1) + fib(n - 2);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number of queries");
+        int q=sc.nextInt();
+        for (int i=0;i<q;i++)
+        {
+        	System.out.print("Enter n value");
+     int   n=sc.nextInt();
+    System.out.println("Fib(n)= " + fib(n));
+    }}
+}
