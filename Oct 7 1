@@ -1,0 +1,26 @@
+class Solution {
+    ArrayList<Integer> primeRange(int M, int N) {
+        ArrayList<Integer>res=new ArrayList<Integer>();
+        if(M==1)
+        {
+            M+=1;
+        }
+for(int i=M;i<=N;i++)
+{
+    boolean flag=false;
+    for(int j=2;j*j<=i;j++)
+    {
+        if(i%j==0)
+        {
+            flag=true;
+            break;
+        }
+    }
+    if(flag==false)
+    {
+        res.add(i);
+    }
+}
+return res;
+}
+}
